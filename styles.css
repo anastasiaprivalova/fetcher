@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+article,
+header,
+nav {
+    text-align: center;
+}
+
+nav,
+.controls,
+.controls > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav > div:first-child,
+.controls > div:first-child {
+    padding-right: 20px;
+}
+
+article {
+    padding: 20px 0;
+}
+
+nav {
+    padding: 0 25vw 20px;
+}
+
+.control-submit {
+    height: 21px;
+    width: 21px;
+    position: relative;
+}
+
+.control-submit::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#search .control-submit::after {
+    content: '🔎';
+}
+
+#url .control-submit::after {
+    content: '🌐';
+}
